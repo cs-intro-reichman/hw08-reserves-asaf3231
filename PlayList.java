@@ -218,12 +218,13 @@ class PlayList {
      *  the list on which it was called (this list). */
     public void sortedInPlace() {
         int min ; 
-        Track temp = new Track("temp", "temp", 0  );
+        Track temp = null ;
 
         for(int i = 0 ; i < size ; i ++){ 
            min = minIndex(i) ;
-           temp = this.tracks[min] ;  
-           this.tracks[min] = this.tracks [i] ; 
+           temp = this.tracks[i] ;  
+           Track  minduration = tracks[min] ; 
+           this.tracks[i] = minduration ; 
            this.tracks[min] = temp ; 
         }
     }
