@@ -65,7 +65,7 @@ class PlayList {
     public int totalDuration() {
         int time = 0 ;
         int totaltime = 0 ; 
-        for ( int i = 0 ; i < size -1; i ++){
+        for ( int i = 0 ; i < size ; i ++){
           time = tracks[i].getDuration() ;  
           totaltime += time ;   
         }
@@ -140,7 +140,7 @@ class PlayList {
              for(int i = 0 ; i < size -1 ; i ++){
                  temptitle = this.tracks[i].getTitle() ; 
                 if(temptitle.equals(title)){
-                    this.remove(i);;
+                    remove(i);
                     break ; 
                 }
             }
@@ -220,7 +220,7 @@ class PlayList {
         int min ; 
         Track temp = new Track("temp", "temp", 0  );
 
-        for(int i = 0 ; i < size -1  ; i ++){ 
+        for(int i = 0 ; i < size ; i ++){ 
            min = minIndex(i) ;
            temp = this.tracks[i] ;  
            this.tracks[i] = this.tracks [min] ; 
