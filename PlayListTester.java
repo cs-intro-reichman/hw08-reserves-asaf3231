@@ -6,8 +6,9 @@ public class PlayListTester {
         if (args.length < 1) {
             printUsage();
             return;
+            
         }
-
+        
         // Reset playlist for each run to ensure a clean state
         resetPlaylist();
 

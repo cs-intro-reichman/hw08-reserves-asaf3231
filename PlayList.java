@@ -65,7 +65,7 @@ class PlayList {
     public int totalDuration() {
         int time = 0 ;
         int totaltime = 0 ; 
-        for ( int i = 0 ; i < size -1  ; i ++){
+        for ( int i = 0 ; i < size -1; i ++){
           time = tracks[i].getDuration() ;  
           totaltime += time ;   
         }
@@ -120,7 +120,7 @@ class PlayList {
             System.out.println("-1");
         }
         this.tracks[i] = null ;
-        for(int j = i ; j < size -1    ; j ++){
+        for(int j = i ; j < size ; j ++){
             this.tracks[j] = this.tracks[j +1] ; 
           }
         this.tracks[size] = null ; 
